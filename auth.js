@@ -24,6 +24,6 @@ firebase.auth().onAuthStateChanged(​function​(​user​) {
       document​.getElementById(​"username"​).innerText = "Welcome: " + snapshot.val().Name;
     })
   } else {
-    window.location = "login.html"
+    window.location = "li.html"
   }
 }); 
