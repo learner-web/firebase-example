@@ -17,13 +17,3 @@ const uiConfig = {
   ],
 };
 ui.start('#firebaseui-auth-container', uiConfig);
-firebase.auth().onAuthStateChanged(​function​(​user​) {
-  if (user) {
-    database.ref('/users/'+ user.uid).once('value')
-    .then(function(snaphot) {
-      document​.getElementById(​"username"​).innerText = "Welcome: " + snapshot.val().Name;
-    })
-  } else {
-    window.location = "li.html"
-  }
-}); 
